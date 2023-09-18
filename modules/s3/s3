@@ -1,0 +1,7 @@
+resource "aws_s3_bucket" "first bucket" {
+  bucket = "fabio-bucket-1234"
+  tags = {
+      Name = "bucket-devops-test"
+      Enviroment = "dev"
+  }
+}
