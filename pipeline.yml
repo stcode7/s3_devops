@@ -28,7 +28,7 @@ steps:
 - task: AWSShellScript@1
   displayName: 'iniciar terraform'
   inputs:
-    awsCredentials: 'Service-Conection-Alex'
+    awsCredentials: 'service_fabio'
     regionName: 'us-east-1'
     scriptType: 'inline'
     disableAutoCwd: true
@@ -41,7 +41,7 @@ steps:
   displayName: 'terraform plan'
   condition: eq(variables['action'], 'deploy')
   inputs:
-    awsCredentials: 'Service-Conection-Alex'
+    awsCredentials: 'service_fabio'
     regionName: 'us-east-1'
     scriptType: 'inline'
     disableAutoCwd: true
@@ -54,7 +54,7 @@ steps:
   displayName: 'terraform apply'
   condition: eq(variables['action'], 'deploy')
   inputs:
-    awsCredentials: 'Service-Conection-Alex'
+    awsCredentials: 'service_fabio'
     regionName: 'us-east-1'
     scriptType: 'inline'
     disableAutoCwd: true
@@ -71,7 +71,7 @@ steps:
   displayName: 'finalizar con terraform'
   condition: eq(variables['action'], 'destroy')
   inputs:
-    awsCredentials: 'Service-Conection-Alex'
+    awsCredentials: 'service_fabio'
     regionName: 'us-east-1'
     scriptType: 'inline'
     disableAutoCwd: true
